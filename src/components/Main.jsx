@@ -3,7 +3,7 @@ import Constants from 'expo-constants'
 import { View, StyleSheet, Text } from "react-native";
 import { Route, Routes } from "react-router-native";
 import {AppBar} from "./AppBar";
-import ListaView from "./lista/ListaView";
+import ListaView from "./lista/WindowsListView";
 import ListaVidriosView from "./vidrios/ListaVidriosView";
 const Main = ()=>{
     return(

@@ -1,8 +1,9 @@
 import React, {useState, useEffect, useRef} from "react";
-import { Button, ScrollView, View } from "react-native";
+import { ScrollView, View } from "react-native";
 import AddVidrioModal from "./AddVidrioModal";
 import VidrioDetailComponent from "./VidrioDetailComponent";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Button } from "react-native-paper";
 
 const ListaVidriosView = ()=>{
   const[listaVidrios, setListaVidrios] = useState([]);
@@ -56,7 +57,7 @@ const ListaVidriosView = ()=>{
 
     return(
         <View style={{ flex:1}}>
-            <Button title="Añadir" onPress={openModal}></Button>
+            <Button onPress={openModal} mode="contained-tonal" style={{margin:4}}>Añadir</Button>
             <ScrollView contentContainerStyle={{flexGrow:1}}>
               {
                 modalVisible && <AddVidrioModal modalVisible={modalVisible} closeModal={closeModal} lista={listaVidrios} setLista={setListaVidrios} editProduct={productToEdit}></AddVidrioModal>

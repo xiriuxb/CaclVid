@@ -6,5 +6,12 @@ export default globalStyles = StyleSheet.create({
     },
     centered:{
         justifyContent:"center"
-    }
+    },
+    boldText:{
+        fontWeight:"bold",
+        fontSize:15
+    },
+    sizedText:{
+        fontSize:15
+    },
 })
