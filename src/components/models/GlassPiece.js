@@ -11,6 +11,7 @@ export default class GlassPiece {
         this.height = height;
         this.width = width;
         this.quantity = quantity ? quantity : 1;
+        this.glassType = glassType.name;
         this.individualArea = parseFloat((Math.ceil(this.width/10)*Math.ceil(this.height/10))/100).toFixed(2);
         this.totalArea = parseFloat(this.individualArea * this.quantity).toFixed(2);
         this.individualPriceA = parseFloat(this.individualArea * glassType.meterPriceA).toFixed(2);
