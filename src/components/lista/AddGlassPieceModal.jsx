@@ -18,11 +18,6 @@ const AddGlassPieceModal = ({modalVisible, closeModal, lista, addGlassPiece})=>{
     const [showDropDown, setShowDropDown] = useState(false);
     const tipoVidrioObject = useRef(null);
 
-    useEffect(()=>{
-
-      console.log(lista)
-    },[])
-
     const hideSnackBar = () => {
         setSnackVisible(false);
       };
@@ -46,7 +41,6 @@ const AddGlassPieceModal = ({modalVisible, closeModal, lista, addGlassPiece})=>{
 
     const setTipoVidrioObject=()=>{
       tipoVidrioObject.current = lista.find((el)=>el.name == tipoVidrio);
-      console.log(tipoVidrioObject.current)
     }
 
     const updateproduct = () =>{

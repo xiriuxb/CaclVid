@@ -24,7 +24,6 @@ const AddVidrioModal = ({modalVisible, closeModal, lista, setLista, editProduct}
 
     useEffect(()=>{
       if(editProduct){
-        console.log(editProduct)
         editMode.current = true;
         onChangeName(`${editProduct.name}`);
         onChangeHeight(`${editProduct.height}`);
@@ -54,7 +53,6 @@ const AddVidrioModal = ({modalVisible, closeModal, lista, setLista, editProduct}
         setSnackVisible(true);
       } else {
         const vidrio = new Vidrio(name, parseInt(height), parseInt(width), parseFloat(totalPrice), parseFloat(priceA), parseFloat(priceB), parseFloat(priceC));
-        console.log(vidrio)
         const elementExists = lista.find(el=>el.name === vidrio.name);
           if(elementExists){
             setSnackMessagge('Ya existe');
@@ -114,7 +112,6 @@ const AddVidrioModal = ({modalVisible, closeModal, lista, setLista, editProduct}
     }
 
     addOrUpdate=()=>{
-      console.log(editMode.current)
       if(editMode.current){
         updateproduct()
       } else {

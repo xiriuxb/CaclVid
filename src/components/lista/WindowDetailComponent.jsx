@@ -39,15 +39,15 @@ const WindowDetailComponent = ({ventana, changeModalVisible, setSelectedWindow})
         <View style={styles.ventana}>
             <View style={{flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}><Text style={[{fontSize:18, fontWeight:'bold'}]}>{ventana.name}</Text></View>
             <View style={{flexDirection:"row"}}>
-                <View style={{flexDirection:"row"}}><Text style={globalStyles.boldText}>M²: </Text><Text style={globalStyles.sizedText}>{ventana.totalArea()} </Text></View>
+                <View style={{flexDirection:"row"}}><Text style={globalStyles.boldText}>M²: </Text><Text style={globalStyles.sizedText}>{parseFloat(ventana.totalArea()).toFixed(2)} </Text></View>
                 <View style={{flexDirection:"row"}}><Text style={globalStyles.boldText}>TotalVidrios: </Text><Text style={globalStyles.sizedText}>{ventana.totalGlasses()} </Text></View>
-                <View style={{flexDirection:"row"}}><Text style={globalStyles.boldText}>PrecioTotal: </Text><Text style={globalStyles.sizedText}>{ventana.totalPriceA()} </Text></View>
+                <View style={{flexDirection:"row"}}><Text style={globalStyles.boldText}>PrecioTotal: </Text><Text style={globalStyles.sizedText}>{parseFloat(ventana.totalPriceA()).toFixed(2)} </Text></View>
             </View>
-            <Text style={[globalStyles.sizedText]}>Alto x Ancho = Cant | m² c/u | m² | Precio c/u | Precio</Text>
+            <Text style={[globalStyles.sizedText]}>Alto x Ancho = Cant | m² (c/u) | m² | Precio c/u | Precio</Text>
             {
                 ventana.glassPieces.map(el=>{
                     return (
-                    <View style={{flexDirection:'row', justifyContent:"space-between", alignItems:"center"}}>
+                    <View key={el.id} style={{flexDirection:'row', justifyContent:"space-between", alignItems:"center"}}>
                         <TouchableWithoutFeedback>
                             <Text style={[globalStyles.sizedText,{textDecorationLine:"underline"}]}>
                                 {el.width} x {el.height} = {el.quantity} | {el.glassType} | {el.individualArea} | {el.totalArea} 

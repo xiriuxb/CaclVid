@@ -23,18 +23,18 @@ export default class Ventana {
     }
 
     totalArea(){
-        return parseFloat(this.glassPieces.reduce((acc,currentElement)=>acc+currentElement.totalArea,0)).toFixed(2);
+        return this.glassPieces.reduce((acc,currentElement)=>acc+currentElement.totalArea,0);
     }
 
     totalPriceA(){
-        return parseFloat(this.glassPieces.reduce((acc, currentElement)=>acc+currentElement.totalPriceA, 0)).toFixed(2);
+        return this.glassPieces.reduce((acc, currentElement)=>acc+currentElement.totalPriceA, 0);
     }
 
     totalPriceB(){
-        return parseFloat(this.glassPieces.reduce((acc, currentElement)=>acc+currentElement.totalPriceB, 0)).toFixed(2);
+        return this.glassPieces.reduce((acc, currentElement)=>acc+currentElement.totalPriceB, 0);
     }
 
     totalPriceC(){
-        return parseFloat(this.glassPieces.reduce((acc, currentElement)=>acc+currentElement.totalPriceC, 0)).toFixed(2);
+        return this.glassPieces.reduce((acc, currentElement)=>acc+currentElement.totalPriceC, 0);
     }
 }
